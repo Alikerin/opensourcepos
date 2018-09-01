@@ -309,7 +309,7 @@ class Attribute extends CI_Model
 
 	public function get_link_values($item_id, $sale_receiving_fk, $id, $definition_flags)
 	{
-			$this->db->select('GROUP_CONCAT(attribute_value SEPARATOR ", ") AS attribute_values, GROUP_CONCAT(attribute_datetime SEPARATOR ", ") AS attribute_datetimevalues');
+		$this->db->select('GROUP_CONCAT(attribute_value SEPARATOR ", ") AS attribute_values, GROUP_CONCAT(attribute_datetime SEPARATOR ", ") AS attribute_datetimevalues');
 		$this->db->from('attribute_links');
 		$this->db->join('attribute_values', 'attribute_values.attribute_id = attribute_links.attribute_id');
 		$this->db->join('attribute_definitions', 'attribute_definitions.definition_id = attribute_links.definition_id');
@@ -344,7 +344,8 @@ class Attribute extends CI_Model
 
 			return implode(',', $attribute_values) . $row_object->attribute_values;
 		}
-		return "";
+
+		return '';
 	}
 
 	public function get_attribute_value($item_id, $definition_id)
