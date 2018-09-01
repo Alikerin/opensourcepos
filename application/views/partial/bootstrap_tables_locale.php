@@ -42,7 +42,7 @@
 			{
 				return "<?php echo $this->lang->line((isset($editable) ? $editable : $controller_name). "_confirm_restore")?>";
 			}
-        }
+		}
 	};
 
 	$.extend($.fn.bootstrapTable.defaults, $.fn.bootstrapTable.locales["<?php echo current_language_code();?>"]);
