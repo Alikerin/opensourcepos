@@ -52,7 +52,7 @@ $(document).ready(function()
 {
 	<?php $this->load->view('partial/datepicker_locale'); ?>
 
-    $('#datetime').datetimepicker(pickerconfig);
+	$('#datetime').datetimepicker(pickerconfig);
 
 	var fill_value = function(event, ui) {
 		event.preventDefault();
